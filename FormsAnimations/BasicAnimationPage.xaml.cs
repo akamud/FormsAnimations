@@ -53,6 +53,12 @@ namespace FormsAnimations
                 await buttonSimultaneo.ScaleTo(1, 1000);
             };
 
+            buttonFade.Clicked += async (sender, e) =>
+            {
+                await buttonFade.FadeTo(0, 1000);
+                await buttonFade.FadeTo(1, 1000);
+            };
+
             buttonShake.Clicked += async (sender, e) => await Shake(buttonShake);
 
             //buttonShakeEasing.Clicked += async (sender, e) => await ShakeEasing(buttonShakeEasing);

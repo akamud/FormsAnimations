@@ -53,6 +53,7 @@
     <Compile Include="BasicAnimationPage.xaml.cs">
       <DependentUpon>BasicAnimationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AnchorAnimationsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

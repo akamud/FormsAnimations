@@ -13,7 +13,8 @@ namespace FormsAnimations
             InitializeComponent();
 
             btnBasicAnimation.Clicked += async (sender, e) => await Navigation.PushAsync(new BasicAnimationPage());
-
+            btnAnchorAnimation.Clicked += async (sender, e) => await Navigation.PushAsync(new AnchorAnimationsPage());
+            
             //btnAnimation.Clicked += async (sender, e) =>
             //{
             //    //await btnAnimation.RotateTo(90, 250, Easing.SinIn);

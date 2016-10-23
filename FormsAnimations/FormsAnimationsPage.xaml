@@ -3,6 +3,7 @@
 	<ScrollView>
 		<StackLayout Padding="20">
 			<Button x:Name="btnBasicAnimation" Text="Básico" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
+			<Button x:Name="btnAnchorAnimation" Text="Anchors" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
 			<Button x:Name="btnAnimation" Text="Hello Forms Animation" HeightRequest="40" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
 		</StackLayout>
 	</ScrollView>
