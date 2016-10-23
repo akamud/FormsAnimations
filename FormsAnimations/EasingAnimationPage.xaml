@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FormsAnimations.EasingAnimationPage">
+	<StackLayout>
+		<StackLayout VerticalOptions="CenterAndExpand" x:Name="layout">
+			<Button x:Name="button" Text="Easing Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
+			<Button x:Name="buttonSinOut" Text="SinOut Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
+			<Button x:Name="buttonCubicOut" Text="Cubic Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
+			<Button x:Name="buttonBounceOut" Text="BounceOut Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
+		</StackLayout>
+		<StackLayout VerticalOptions="End" Orientation="Horizontal">
+			<Button x:Name="buttonPlayAll" Text="Play" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Start" />
+			<Button x:Name="buttonReset" Text="Reset" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Start" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

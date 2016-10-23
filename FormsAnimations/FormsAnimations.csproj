@@ -41,6 +41,9 @@
     <EmbeddedResource Include="AnchorAnimationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="EasingAnimationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -58,6 +61,9 @@
     </Compile>
     <Compile Include="AnchorAnimationPage.xaml.cs">
       <DependentUpon>AnchorAnimationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EasingAnimationPage.xaml.cs">
+      <DependentUpon>EasingAnimationPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
