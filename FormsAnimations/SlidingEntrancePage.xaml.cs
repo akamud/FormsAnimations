@@ -20,13 +20,13 @@ namespace FormsAnimations
             foreach (View view in stackLayout.Children)
             {
                 view.TranslationX = offset;
-                offset *= -1;
+                //offset *= -1;
             }
 
             foreach (View view in stackLayout.Children)
             {
-                await Task.WhenAny(view.TranslateTo(0, 0, 1000, Easing.SpringOut),
-                                   Task.Delay(100));
+                await Task.WhenAny(view.TranslateTo(0, 0, 1000, Easing.Linear));
+                // delay 100
             }
         }
     }
