@@ -13,7 +13,7 @@ namespace FormsAnimations
             InitializeComponent();
 
             btnBasicAnimation.Clicked += async (sender, e) => await Navigation.PushAsync(new BasicAnimationPage());
-            btnAnchorAnimation.Clicked += async (sender, e) => await Navigation.PushAsync(new AnchorAnimationsPage());
+            btnAnchorAnimation.Clicked += async (sender, e) => await Navigation.PushAsync(new AnchorAnimationPage());
             
             //btnAnimation.Clicked += async (sender, e) =>
             //{

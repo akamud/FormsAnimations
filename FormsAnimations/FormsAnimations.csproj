@@ -38,6 +38,9 @@
     <EmbeddedResource Include="BasicAnimationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnchorAnimationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -53,7 +56,9 @@
     <Compile Include="BasicAnimationPage.xaml.cs">
       <DependentUpon>BasicAnimationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AnchorAnimationsPage.cs" />
+    <Compile Include="AnchorAnimationPage.xaml.cs">
+      <DependentUpon>AnchorAnimationPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

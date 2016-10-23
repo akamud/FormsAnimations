@@ -4,10 +4,10 @@
 		<Button x:Name="button" Text="RotateTo Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
 		<Button x:Name="buttonTempo" Text="RotateTo com tempo Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
 		<Button x:Name="buttonRelative" Text="RelRotateTo Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
-		<Button x:Name="buttonComposto" Text="Composição Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
-		<Button x:Name="buttonSimultaneo" Text="Simultâneas Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
 		<Button x:Name="buttonFade" Text="Fade Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
 		<Button x:Name="buttonShake" Text="Shake Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
+		<Button x:Name="buttonComposto" Text="Composição Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
+		<Button x:Name="buttonSimultaneo" Text="Simultâneas Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
 <!--		<Button x:Name="buttonShakeEasing" Text="Shake Easing Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />-->
 	</StackLayout>
 </ContentPage>
