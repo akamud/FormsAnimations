@@ -44,6 +44,9 @@
     <EmbeddedResource Include="EasingAnimationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="EasingAnimation2Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -64,6 +67,9 @@
     </Compile>
     <Compile Include="EasingAnimationPage.xaml.cs">
       <DependentUpon>EasingAnimationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EasingAnimation2Page.xaml.cs">
+      <DependentUpon>EasingAnimation2Page.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

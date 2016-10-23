@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FormsAnimations.EasingAnimationPage">
 	<StackLayout>
 		<StackLayout VerticalOptions="CenterAndExpand" x:Name="layout">
-			<Button x:Name="button" Text="Easing Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
+			<Button x:Name="button" Text="Linear Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
 			<Button x:Name="buttonSinOut" Text="SinOut Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
 			<Button x:Name="buttonCubicOut" Text="Cubic Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />
 			<Button x:Name="buttonBounceOut" Text="BounceOut Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Start" VerticalOptions="Center" />

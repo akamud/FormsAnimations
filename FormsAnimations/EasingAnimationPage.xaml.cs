@@ -22,7 +22,7 @@ namespace FormsAnimations
                 await MoveRight(buttonSinOut, Easing.SinOut);
             };
 
-            buttonCubicOut.Clicked += async (sender, e) => 
+            buttonCubicOut.Clicked += async (sender, e) =>
             {
                 await MoveRight(buttonCubicOut, Easing.CubicOut);
             };
