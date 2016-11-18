@@ -13,6 +13,7 @@ namespace FormsAnimations
 
             button.Clicked += async (sender, e) =>
             {
+                button.Rotation = 0;
                 await button.RotateTo(360);
             };
 
@@ -24,7 +25,7 @@ namespace FormsAnimations
 
             buttonRelative.Clicked += async (sender, e) =>
             {
-                //buttonRelative.Rotation = 0;
+                buttonRelative.Rotation = 0;
                 await buttonRelative.RelRotateTo(90, 1000);
             };
 
@@ -42,13 +43,10 @@ namespace FormsAnimations
             {
                 buttonSimultaneo.Rotation = 0;
 
-                //await Task.WhenAny<bool>(
-                //    buttonSimultaneo.RotateTo(360, 2000),
-                //    buttonSimultaneo.ScaleTo(5, 1000)
-                //);
-
-                await buttonSimultaneo.RotateTo(360, 2000);
-                await buttonSimultaneo.ScaleTo(5, 1000);
+                await Task.WhenAll<bool>(
+                    buttonSimultaneo.RotateTo(360, 2000),
+                    buttonSimultaneo.ScaleTo(5, 1000)
+                );
 
                 await buttonSimultaneo.ScaleTo(1, 1000);
             };
