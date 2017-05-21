@@ -18,12 +18,14 @@ namespace FormsAnimations
             InitializeComponent();
 
             isAnimatedSwitch.IsToggled = App.IsAnimated;
+            isAnimatedBonitaoSwitch.IsToggled = App.IsAnimatedBonitao;
             btnRating.Clicked += async (sender, e) => await GoToPage(new RatingPage());
         }
 
         private async Task GoToPage(Page page)
         {
             App.IsAnimated = isAnimatedSwitch.IsToggled;
+            App.IsAnimatedBonitao = isAnimatedBonitaoSwitch.IsToggled;
 
             await Navigation.PushAsync(page);
         }

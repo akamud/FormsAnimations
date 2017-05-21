@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FormsAnimations.Exemplos.RatingPage"
-             BackgroundColor="#E0E0E0">
+             BackgroundColor="White">
     <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
-        <StackLayout HorizontalOptions="Center" Padding="20">
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="20" BackgroundColor="#E0E0E0">
             <Image Source="user.png" HeightRequest="96" />
             <Label Text="Marvin" TextColor="Black"  HorizontalOptions="Center"/>
             <Label Text="Terça-feira de manhã, Avenida Angélica" TextColor="Black"  HorizontalOptions="Center"/>
@@ -12,7 +12,7 @@
 
         <View BackgroundColor="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
-        <StackLayout BackgroundColor="White" Padding="20">
+        <StackLayout BackgroundColor="White" Padding="10">
             <Label Text="Como foi sua experiência?" HorizontalOptions="Center" TextColor="Black"/>
 
             <Grid HorizontalOptions="CenterAndExpand">
@@ -54,6 +54,23 @@
 
         <View BackgroundColor="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
-        <Button Text="Enviar" />
+        <StackLayout BackgroundColor="White" Padding="20" HorizontalOptions="FillAndExpand">
+            <Label Text="Enviar um elogio?" HorizontalOptions="Center" TextColor="Black"/>
+
+            <AbsoluteLayout HeightRequest="150" HorizontalOptions="FillAndExpand">
+                <Image Source="atendimento.png" x:Name="atendimento" HeightRequest="48"  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2,0.5,0.65,0.65"/>
+                <Image Source="servico.png" x:Name="servico" HeightRequest="48"  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.8,0.5,0.65,0.65"/>
+
+                <Image Source="musica.png" x:Name="musica" HeightRequest="48" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,0.2,0.2" />
+
+                <Image Source="compliment.png" x:Name="plus" HeightRequest="48" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GiveCompliment"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </AbsoluteLayout>
+        </StackLayout>
+
+        <Button Text="Enviar" VerticalOptions="EndAndExpand" Margin="10"/>
     </StackLayout>
 </ContentPage>

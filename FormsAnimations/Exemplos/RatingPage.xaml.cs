@@ -44,7 +44,7 @@ namespace FormsAnimations.Exemplos
                     starStates[i].Source = SwapState(starStates[i]);
 
                 if (App.IsAnimated)
-                    await Task.WhenAny(starStates[i].ScaleTo(1, 500, Easing.SpringOut), Task.Delay(100));
+                    await Task.WhenAny(starStates[i].ScaleTo(1, 500, GetEasing(Easing.SpringOut)), Task.Delay(100));
             }
         }
 
@@ -58,5 +58,60 @@ namespace FormsAnimations.Exemplos
 
         async void Choose5Stars(object sender, EventArgs args) => await SelectStars(5);
 
+        async void GiveCompliment(object sender, EventArgs args)
+        {
+            var atendimentoTranslationX = -80;
+            var servicoTranslationX = -35;
+            var musicaTranslationX = 115;
+
+            var atendimentoScale = 1.5;
+            var servicoScale = 1.5;
+            var musicaScale = 5;
+
+            if (!App.IsAnimated)
+            {
+                plus.Scale = 0;
+
+                atendimento.Scale = atendimentoScale;
+                atendimento.TranslationX = atendimentoTranslationX;
+
+                servico.Scale = servicoScale;
+                servico.TranslationX = servicoTranslationX;
+
+                musica.Scale = musicaScale;
+                musica.TranslationX = musicaTranslationX;
+            }
+            else
+            {
+                if (App.IsAnimatedBonitao)
+                {
+                    await Task.WhenAny(
+                        plus.ScaleTo(0, 200, GetEasing(Easing.SpringIn)),
+                        atendimento.TranslateTo(atendimentoTranslationX, 0, 500, GetEasing(Easing.SpringOut)),
+                        atendimento.ScaleTo(atendimentoScale, 500, GetEasing(Easing.SpringOut)),
+                        servico.TranslateTo(servicoTranslationX, 0, 500, GetEasing(Easing.SpringOut)),
+                        servico.ScaleTo(servicoScale, 500, GetEasing(Easing.SpringOut)),
+                        musica.TranslateTo(musicaTranslationX, 0, 500, GetEasing(Easing.SpringOut)),
+                        musica.ScaleTo(musicaScale, 500, GetEasing(Easing.SpringOut)),
+                        Task.Delay(100)
+                    );
+                }
+                else
+                {
+                    await plus.ScaleTo(0, 100, GetEasing(Easing.SpringIn));
+
+                    await atendimento.TranslateTo(atendimentoTranslationX, 0, 100, GetEasing(Easing.SpringOut));
+                    await atendimento.ScaleTo(atendimentoScale, 100, GetEasing(Easing.SpringOut));
+
+                    await servico.TranslateTo(servicoTranslationX, 0, 100, GetEasing(Easing.SpringOut));
+                    await servico.ScaleTo(servicoScale, 100, GetEasing(Easing.SpringOut));
+
+                    await musica.TranslateTo(musicaTranslationX, 0, 100, GetEasing(Easing.SpringOut));
+                    await musica.ScaleTo(musicaScale, 100, GetEasing(Easing.SpringOut));
+                }
+            }
+        }
+
+        private Easing GetEasing(Easing defaultEasing) => App.IsAnimatedBonitao ? defaultEasing : Easing.Linear;
     }
 }

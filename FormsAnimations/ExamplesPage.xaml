@@ -8,6 +8,11 @@
             <Label Text="Animação" />
         </StackLayout>
 
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="isAnimatedBonitaoSwitch" IsToggled="False"/>
+            <Label Text="Animação Bonitona" />
+        </StackLayout>
+
         <Button x:Name="btnRating" Text="Rating" />
     </StackLayout>
 </ContentPage>
