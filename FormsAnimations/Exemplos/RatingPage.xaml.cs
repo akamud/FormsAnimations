@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Xamanimation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,7 @@ namespace FormsAnimations.Exemplos
     public partial class RatingPage : ContentPage
     {
         private List<Image> starStates;
+        private bool givenCompliment = false;
 
         public RatingPage()
         {
@@ -21,6 +23,20 @@ namespace FormsAnimations.Exemplos
             starStates.Add(star3);
             starStates.Add(star4);
             starStates.Add(star5);
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (App.IsAnimatedBonitao)
+            {
+                for (int i = 0; i < starStates.Count; i++)
+                {
+                    starStates[i].Scale = 0.2;
+                    await Task.WhenAny(starStates[i].ScaleTo(1, 500, Easing.SpringOut), Task.Delay(100));
+                }
+            }
         }
 
         private bool IsSelected(Image star) => (star.Source as FileImageSource).File == "star_selected.png";
@@ -56,10 +72,34 @@ namespace FormsAnimations.Exemplos
 
         async void Choose4Stars(object sender, EventArgs args) => await SelectStars(4);
 
-        async void Choose5Stars(object sender, EventArgs args) => await SelectStars(5);
+        async void Choose5Stars(object sender, EventArgs args)
+        {
+            await SelectStars(5);
+
+            if (App.IsAnimated)
+            {
+                await complimentBox.FadeTo(1, 250, Easing.CubicIn);
+            }
+            else
+            {
+                complimentBox.Opacity = 1;
+            }
+
+            if (App.IsAnimatedBonitao)
+            {
+                var heartAnimation = new HeartAnimation();
+                while (!givenCompliment)
+                {
+                    await plus.Animate(heartAnimation);
+                    await Task.Delay(3000);
+                }
+            }
+        }
 
         async void GiveCompliment(object sender, EventArgs args)
         {
+            givenCompliment = true;
+
             var atendimentoTranslationX = -80;
             var servicoTranslationX = -35;
             var musicaTranslationX = 115;

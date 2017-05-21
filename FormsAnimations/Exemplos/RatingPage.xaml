@@ -54,7 +54,7 @@
 
         <View BackgroundColor="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
-        <StackLayout BackgroundColor="White" Padding="20" HorizontalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="White" Padding="20" HorizontalOptions="FillAndExpand" x:Name="complimentBox" Opacity="0">
             <Label Text="Enviar um elogio?" HorizontalOptions="Center" TextColor="Black"/>
 
             <AbsoluteLayout HeightRequest="150" HorizontalOptions="FillAndExpand">
