@@ -43,11 +43,13 @@ namespace FormsAnimations
             {
                 buttonSimultaneo.Rotation = 0;
 
-                await Task.WhenAll<bool>(
-                    buttonSimultaneo.RotateTo(360, 2000),
-                    buttonSimultaneo.ScaleTo(5, 1000)
-                );
+                //await Task.WhenAll<bool>(
+                //    buttonSimultaneo.RotateTo(360, 2000),
+                //    buttonSimultaneo.ScaleTo(5, 1000)
+                //);
 
+                await buttonSimultaneo.RotateTo(360, 2000);
+                await buttonSimultaneo.ScaleTo(5, 1000);
                 await buttonSimultaneo.ScaleTo(1, 1000);
             };
 
