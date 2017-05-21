@@ -13,8 +13,8 @@ namespace FormsAnimations
 
             button.Clicked += async (sender, e) =>
             {
-                button.Rotation = 0;
-                await button.RotateTo(360);
+                await button.RotateTo(button.Rotation + 360);
+                button.Text = $"RotateTo {button.Rotation + 360}";
             };
 
             buttonTempo.Clicked += async (sender, e) =>
