@@ -8,6 +8,7 @@
 			<Button x:Name="btnEasingAnimation2" Text="Easing 2" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
             <Button x:Name="btnSlidingEntrance" Text="Sliding Entrance" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
             <Button x:Name="btnXamanimation" Text="Xamanimation" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button x:Name="btnExamples" Text="Exemplos" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" />
         </StackLayout>
 	</ScrollView>
 </ContentPage>

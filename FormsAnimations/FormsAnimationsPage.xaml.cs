@@ -15,7 +15,8 @@ namespace FormsAnimations
             btnEasingAnimation.Clicked += async (sender, e) => await Navigation.PushAsync(new EasingAnimationPage());
             btnEasingAnimation2.Clicked += async (sender, e) => await Navigation.PushAsync(new EasingAnimation2Page());
             btnSlidingEntrance.Clicked += async (sender, e) => await Navigation.PushAsync(new SlidingEntrancePage(), false);
-            btnXamanimation.Clicked += async (sender, e) => await Navigation.PushAsync(new XamanimationPage(), false);
+            btnXamanimation.Clicked += async (sender, e) => await Navigation.PushAsync(new XamanimationPage());
+            btnExamples.Clicked += async (sender, e) => await Navigation.PushAsync(new ExamplesPage());
         }
     }
 }

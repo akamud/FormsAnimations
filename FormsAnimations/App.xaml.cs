@@ -4,6 +4,8 @@ namespace FormsAnimations
 {
     public partial class App : Application
     {
+        public static bool IsAnimated = false;
+
         public App()
         {
             InitializeComponent();
