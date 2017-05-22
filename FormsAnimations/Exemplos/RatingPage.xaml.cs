@@ -34,11 +34,7 @@ namespace FormsAnimations.Exemplos
 
             if (App.IsAnimatedBonitao)
             {
-                for (int i = 0; i < starStates.Count; i++)
-                {
-                    starStates[i].Scale = 0.1;
-                    await Task.WhenAny(starStates[i].ScaleTo(1, 500, Easing.SpringOut), Task.Delay(100));
-                }
+                // TODO: Focar estrelas na abertura para estimular o voto
             }
         }
 
@@ -58,7 +54,9 @@ namespace FormsAnimations.Exemplos
                     starStates[i].Source = SwapState(starStates[i]);
 
                 if (App.IsAnimated)
-                    await Task.WhenAny(starStates[i].ScaleTo(1, 500, GetEasing(Easing.SpringOut)), Task.Delay(100));
+                {
+                    // TODO: Estrelas selecionadas com animação
+                }
                 else
                     starStates[i].Scale = 1;
             }
@@ -87,7 +85,7 @@ namespace FormsAnimations.Exemplos
 
             if (App.IsAnimated)
             {
-                await complimentBox.FadeTo(1, 250, Easing.CubicIn);
+                // TODO: Exibir a caixa de elogios com Cubic 250
             }
             else
             {
@@ -98,12 +96,7 @@ namespace FormsAnimations.Exemplos
             {
                 if (heartAnimation == null)
                 {
-                    heartAnimation = new HeartAnimation();
-                    while (!givenCompliment)
-                    {
-                        await plus.Animate(heartAnimation);
-                        await Task.Delay(3000);
-                    }
+                    // TODO: Animação para estimular elogios
                 }
             }
         }
@@ -139,16 +132,8 @@ namespace FormsAnimations.Exemplos
 
                 if (App.IsAnimatedBonitao)
                 {
-                    await Task.WhenAny(
-                        plus.ScaleTo(0, 200, GetEasing(Easing.SpringIn)),
-                        atendimento.TranslateTo(atendimentoTranslationX, 0, 500, GetEasing(Easing.SpringOut)),
-                        atendimento.ScaleTo(atendimentoScale, 500, GetEasing(Easing.SpringOut)),
-                        servico.TranslateTo(servicoTranslationX, 0, 500, GetEasing(Easing.SpringOut)),
-                        servico.ScaleTo(servicoScale, 500, GetEasing(Easing.SpringOut)),
-                        musica.TranslateTo(musicaTranslationX, 0, 500, GetEasing(Easing.SpringOut)),
-                        musica.ScaleTo(musicaScale, 500, GetEasing(Easing.SpringOut)),
-                        Task.Delay(100)
-                    );
+                    // TODO: Sumir botão de elogio SpringIn
+                    // TODO: Movers elementos de elogios e escalonar simultaneamente
                 }
                 else
                 {
