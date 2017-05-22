@@ -56,14 +56,15 @@ namespace FormsAnimations.Exemplos
 
             for (int i = 0; i < voting; i++)
             {
-                if (App.IsAnimated)
-                    starStates[i].Scale = 0.1;
+                starStates[i].Scale = 0.1;
 
                 if (!IsSelected(starStates[i]))
                     starStates[i].Source = SwapState(starStates[i]);
 
                 if (App.IsAnimated)
                     await Task.WhenAny(starStates[i].ScaleTo(1, 500, GetEasing(Easing.SpringOut)), Task.Delay(100));
+                else
+                    starStates[i].Scale = 1;
             }
         }
 
