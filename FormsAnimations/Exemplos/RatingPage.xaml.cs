@@ -36,7 +36,7 @@ namespace FormsAnimations.Exemplos
             {
                 for (int i = 0; i < starStates.Count; i++)
                 {
-                    starStates[i].Scale = 0.2;
+                    starStates[i].Scale = 0.1;
                     await Task.WhenAny(starStates[i].ScaleTo(1, 500, Easing.SpringOut), Task.Delay(100));
                 }
             }
@@ -48,11 +48,7 @@ namespace FormsAnimations.Exemplos
 
         private async Task SelectStars(int voting)
         {
-            for (int i = voting; i < starStates.Count; i++)
-            {
-                if (IsSelected(starStates[i]))
-                    starStates[i].Source = SwapState(starStates[i]);
-            }
+            ClearStars(voting);
 
             for (int i = 0; i < voting; i++)
             {
@@ -65,6 +61,15 @@ namespace FormsAnimations.Exemplos
                     await Task.WhenAny(starStates[i].ScaleTo(1, 500, GetEasing(Easing.SpringOut)), Task.Delay(100));
                 else
                     starStates[i].Scale = 1;
+            }
+        }
+
+        private void ClearStars(int voting)
+        {
+            for (int i = voting; i < starStates.Count; i++)
+            {
+                if (IsSelected(starStates[i]))
+                    starStates[i].Source = SwapState(starStates[i]);
             }
         }
 
