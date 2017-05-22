@@ -12,10 +12,13 @@ namespace FormsAnimations.Exemplos
     {
         private List<Image> starStates;
         private bool givenCompliment = false;
+        private HeartAnimation heartAnimation;
 
         public RatingPage()
         {
             InitializeComponent();
+
+            ((NavigationPage)App.Current.MainPage).BarBackgroundColor = Color.FromHex("010101");
 
             starStates = new List<Image>();
             starStates.Add(star1);
@@ -87,11 +90,14 @@ namespace FormsAnimations.Exemplos
 
             if (App.IsAnimatedBonitao)
             {
-                var heartAnimation = new HeartAnimation();
-                while (!givenCompliment)
+                if (heartAnimation == null)
                 {
-                    await plus.Animate(heartAnimation);
-                    await Task.Delay(3000);
+                    heartAnimation = new HeartAnimation();
+                    while (!givenCompliment)
+                    {
+                        await plus.Animate(heartAnimation);
+                        await Task.Delay(3000);
+                    }
                 }
             }
         }
