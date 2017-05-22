@@ -129,6 +129,8 @@ namespace FormsAnimations.Exemplos
             }
             else
             {
+                plus.AbortAnimation("Hearth");
+
                 if (App.IsAnimatedBonitao)
                 {
                     await Task.WhenAny(
