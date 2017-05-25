@@ -3,7 +3,7 @@
              x:Class="FormsAnimations.BasicAnimationPage"
              xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation">
   <StackLayout VerticalOptions="CenterAndExpand">
-    <Button x:Name="button" Text="RotateTo 360" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
+    <Button x:Name="button" Text="Rotation 0" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
     <Button x:Name="buttonTempo" Text="RotateTo com tempo Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
     <Button x:Name="buttonRelative" Text="RelRotateTo Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
     <Button x:Name="buttonFade" Text="Fade Xamarin.Forms" BorderColor="Red" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="Center" />
