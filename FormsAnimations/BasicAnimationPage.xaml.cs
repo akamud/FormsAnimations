@@ -22,7 +22,7 @@ namespace FormsAnimations
 
             buttonTempo.Clicked += async (sender, e) =>
             {
-                //button.Rotation = 0;
+                //buttonTempo.Rotation = 0;
                 await buttonTempo.RotateTo(360, 2000);
             };
 

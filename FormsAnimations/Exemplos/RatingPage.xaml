@@ -64,7 +64,7 @@
 
                 <Image Source="musica.png" x:Name="musica" HeightRequest="48" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,0.2,0.2" />
 
-                <Image Source="compliment.png" x:Name="plus" HeightRequest="48" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+                <Image Source="compliment.png" x:Name="elogio" HeightRequest="48" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="GiveCompliment"/>
                     </Image.GestureRecognizers>

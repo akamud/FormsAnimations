@@ -115,7 +115,7 @@ namespace FormsAnimations.Exemplos
 
             if (!App.IsAnimated)
             {
-                plus.Scale = 0;
+                elogio.Scale = 0;
 
                 atendimento.Scale = atendimentoScale;
                 atendimento.TranslationX = atendimentoTranslationX;
@@ -128,7 +128,7 @@ namespace FormsAnimations.Exemplos
             }
             else
             {
-                plus.AbortAnimation("Hearth");
+                elogio.AbortAnimation("Hearth");
 
                 if (App.IsAnimatedBonitao)
                 {
@@ -137,7 +137,7 @@ namespace FormsAnimations.Exemplos
                 }
                 else
                 {
-                    await plus.ScaleTo(0, 100, GetEasing(Easing.SpringIn));
+                    await elogio.ScaleTo(0, 100, GetEasing(Easing.SpringIn));
 
                     await atendimento.TranslateTo(atendimentoTranslationX, 0, 100, GetEasing(Easing.SpringOut));
                     await atendimento.ScaleTo(atendimentoScale, 100, GetEasing(Easing.SpringOut));
