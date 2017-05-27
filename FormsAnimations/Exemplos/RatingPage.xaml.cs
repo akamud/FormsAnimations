@@ -96,7 +96,7 @@ namespace FormsAnimations.Exemplos
             {
                 if (heartAnimation == null)
                 {
-                    // TODO: Animação para estimular elogios
+                    // TODO: Animação para estimular elogios em Loop
                 }
             }
         }
